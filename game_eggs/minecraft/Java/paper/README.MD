@@ -12,7 +12,8 @@ The minecraft server requires a single port for access (default 25565) but plugi
 
 ## Disclaimer
 
-Please keep in mind that these pre-configured files work for us at our hosting https://TweaksHosting.com. This may not be suitable for you. 
+Please keep in mind that these pre-configured files work for us at our hosting [TweaksHosting](https://TweaksHosting.com/). This may not be suitable for you. 
+
 
 ###MCTweaks-Experimental
 We do not recommend utilizing the experimental version because it may include numerous flaws. and will change on a regular basis
