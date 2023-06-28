@@ -1,3 +1,4 @@
+
 egg-mctweaks-paper.json (For New egg creation)
 
 cd /mnt/server
@@ -13,6 +14,7 @@ if [ ! -f server.properties ]; then
     curl -o server.properties https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/server.properties
 fi
 
+# Impact: Medium
 if [ ! -f bukkit.yml ]; then
     echo -e "Downloading MCTweaks Optimised bukkit.yml"
     curl -o bukkit.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/paper/bukkit.yml
@@ -27,11 +29,13 @@ if [ ! -f server.properties ]; then
     curl -o server.properties https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/server.properties
 fi
 
+# Impact: Medium
 if [ ! -f bukkit.yml ]; then
     echo -e "Downloading MCTweaks Optimised bukkit.yml"
     curl -o bukkit.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/spigot/bukkit.yml
 fi
 
+# Impact: Minor
 if [ ! -f spigot.yml ]; then
     echo -e "Downloading MCTweaks Optimised spigot.yml"
     curl -o spigot.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/spigot/spigot.yml
