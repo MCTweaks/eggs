@@ -40,3 +40,37 @@ if [ ! -f spigot.yml ]; then
     echo -e "Downloading MCTweaks Optimised spigot.yml"
     curl -o spigot.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/spigot/spigot.yml
 fi
+
+#egg-mctweaks-geysermc-paper.json
+
+GEYSER_DOWNLOAD_URL=https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/build/libs/Geyser-Spigot.jar
+FLOODGATE_DOWNLOAD_URL=https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/build/libs/floodgate-spigot.jar
+
+cd /mnt/server
+echo -e "Running curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}"
+
+if [ -f ${SERVER_JARFILE} ]; then
+	mv ${SERVER_JARFILE} ${SERVER_JARFILE}.old
+fi
+
+mkdir -p /mnt/server/plugins
+curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
+
+echo -e "Downloading last successful build with curl -o plugins/geyser-spigot ${GEYSER_DOWNLOAD_URL}"
+curl -o plugins/geyser-spigot.jar ${GEYSER_DOWNLOAD_URL}
+
+echo -e "Downloading last successful build with curl -o plugins/floodgate-spigot.jar ${FLOODGATE_DOWNLOAD_URL}"
+curl -o plugins/floodgate-spigot.jar ${FLOODGATE_DOWNLOAD_URL}
+
+if [ ! -f server.properties ]; then
+    echo -e "Downloading MC server.properties"
+    curl -o server.properties https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/server.properties
+fi
+
+# Impact: Medium
+if [ ! -f bukkit.yml ]; then
+    echo -e "Downloading MCTweaks Optimised bukkit.yml"
+    curl -o bukkit.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Crossplay/paper/bukkit.yml
+fi
+
+echo -e "Installation Finished"
