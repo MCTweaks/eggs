@@ -16,4 +16,4 @@ The minecraft server requires a single port for access (default 25565) but plugi
 
 ## Disclaimer
 
-Please keep in mind that these pre-configured files work for us. These may not be suitable for you. 
+Please keep in mind that these pre-configured files work for our clients. This may not be suitable for you. 
