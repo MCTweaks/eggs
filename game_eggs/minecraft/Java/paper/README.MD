@@ -2,10 +2,6 @@
 
 Our version of paper includes preconfigured files to make it as optimized as possible.
 
-Paper is the next generation of Minecraft server, compatible with Spigot plugins and offering uncompromising performance.
-
-Check out the [Paper Website](https://papermc.io/) for more information.
-
 ## Server Ports
 
 The minecraft server requires a single port for access (default 25565) but plugins may require extra ports to enabled for the server.
@@ -16,4 +12,8 @@ The minecraft server requires a single port for access (default 25565) but plugi
 
 ## Disclaimer
 
-Please keep in mind that these pre-configured files work for our clients. This may not be suitable for you. 
+Please keep in mind that these pre-configured files work for us at our hosting https://TweaksHosting.com. This may not be suitable for you. 
+
+### Paper
+This is not a fork of Paper.
+Check out the [Paper Website](https://papermc.io/) for more information.
