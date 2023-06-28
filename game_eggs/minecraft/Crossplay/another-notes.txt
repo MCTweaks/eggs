@@ -1,3 +1,13 @@
+GEYSER_DOWNLOAD_URL=https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/build/libs/Geyser-Spigot.jar
+FLOODGATE_DOWNLOAD_URL=https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/build/libs/floodgate-spigot.jar
+
+cd /mnt/server
+echo -e "Running curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}"
+
+if [ -f ${SERVER_JARFILE} ]; then
+	mv ${SERVER_JARFILE} ${SERVER_JARFILE}.old
+fi
+
 mkdir -p /mnt/server/plugins
 curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
 
@@ -18,9 +28,11 @@ if [ ! -f bukkit.yml ]; then
     curl -o bukkit.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Crossplay/paper/bukkit.yml
 fi
 
+cd /mnt/server/plugins/
 if [ ! -f config.yml ]; then
-    echo -e "Downloading Geysermc config"
+    echo -e "Downloading Geyser Config.yml with filled informaton"
     curl -o config.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Crossplay/Geyser-Spigot/config.yml
 fi
+cd /mnt/server
 
 echo -e "Installation Finished"
