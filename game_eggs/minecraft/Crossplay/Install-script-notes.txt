@@ -74,3 +74,29 @@ if [ ! -f bukkit.yml ]; then
 fi
 
 echo -e "Installation Finished"
+
+{
+    "plugins/Geyser-Spigot": {
+        "parser": "yml",
+        "find": {
+            "port": "{{server.build.default.port}}"
+        }
+    }
+}
+
+[{
+	"server.properties": {
+		"parser": "properties",
+		"find": {
+			"server-ip": "0.0.0.0",
+			"server-port": "{{server.build.default.port}}"
+		}
+	}
+}, {
+    "plugins/Geyser-Spigot": {
+        "parser": "yml",
+        "find": {
+            "port": "{{server.build.default.port}}"
+		}
+	}
+}]
