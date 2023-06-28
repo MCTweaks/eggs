@@ -1,8 +1,6 @@
-# Spigot
-
-A high performance Minecraft server implementation
-
-[Spigot Website](https://www.spigotmc.org/)
+# Tweaks Spigot
+This is not a fork of Spigot.
+Our version of paper includes preconfigured files to make it as optimized as possible.
 
 ## Server Ports
 
@@ -12,10 +10,13 @@ The minecraft server requires a single port for access (default 25565) but plugi
 |-------|---------|
 | Game  | 25565   |
 
-## Server Specific
+## Disclaimer
 
-Spigot was hit with a DMCA and now requires that it be built by the user.
+Please keep in mind that these pre-configured files work for us at our hosting [TweaksHosting](https://TweaksHosting.com/). This may not be suitable for you. 
 
-### This egg will build spigot for you
+###MCTweaks-Experimental-spigot.json
+We do not recommend utilizing the experimental version because it may include numerous flaws. and will change on a regular basis
 
-You can also supply a download link to a server jar if you want.
+### Spigot
+Check out the [Spigot Website](https://www.spigotmc.org/) for more information.
+
