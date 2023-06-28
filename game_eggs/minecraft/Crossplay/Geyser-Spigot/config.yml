@@ -13,4 +13,4 @@ remote:
   # If Floodgate is installed and `address:` is set to "auto", then "auth-type: floodgate" will automatically be used.
   auth-type: floodgate
   # Allow for password-based authentication methods through Geyser. Only useful in online mode.
-  # If this is false, users must authenticate to Microsoft using a code provided by Geyser on their desktop.t
+  # If this is false, users must authenticate to Microsoft using a code provided by Geyser on their desktop.

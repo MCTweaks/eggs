@@ -28,7 +28,9 @@ if [ ! -f bukkit.yml ]; then
     curl -o bukkit.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Crossplay/paper/bukkit.yml
 fi
 
-cd /mnt/server/plugins/
+mkdir -p /mnt/server/plugins/Geyser-Spigot
+cd /mnt/server/plugins/Geyser-Spigot
+
 if [ ! -f config.yml ]; then
     echo -e "Downloading Geyser Config.yml with filled informaton"
     curl -o config.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Crossplay/Geyser-Spigot/config.yml
