@@ -7,7 +7,7 @@
     "exported_at": "2023-06-28T12:09:47-04:00",
     "name": "Tweaks-Paper",
     "author": "MCSTweaks@gmail.com",
-    "description": "High performance Spigot fork that aims to fix gameplay and mechanics inconsistencies.",
+    "description": "Our version of paper includes preconfigured files to make it as optimized as possible.",
     "features": [
         "eula",
         "java_version",
