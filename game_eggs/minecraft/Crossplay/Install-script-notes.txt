@@ -1,0 +1,42 @@
+
+egg-mctweaks-paper.json (For New egg creation)
+
+cd /mnt/server
+
+if [ -f ${SERVER_JARFILE} ]; then
+	mv ${SERVER_JARFILE} ${SERVER_JARFILE}.old
+fi
+
+curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
+
+if [ ! -f server.properties ]; then
+    echo -e "Downloading MC server.properties"
+    curl -o server.properties https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/server.properties
+fi
+
+# Impact: Medium
+if [ ! -f bukkit.yml ]; then
+    echo -e "Downloading MCTweaks Optimised bukkit.yml"
+    curl -o bukkit.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/paper/bukkit.yml
+fi
+
+#egg-mctweaks-spigot.json (The Copy)
+
+cd /mnt/server
+
+if [ ! -f server.properties ]; then
+    echo -e "Downloading MC server.properties"
+    curl -o server.properties https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/server.properties
+fi
+
+# Impact: Medium
+if [ ! -f bukkit.yml ]; then
+    echo -e "Downloading MCTweaks Optimised bukkit.yml"
+    curl -o bukkit.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/spigot/bukkit.yml
+fi
+
+# Impact: Minor
+if [ ! -f spigot.yml ]; then
+    echo -e "Downloading MCTweaks Optimised spigot.yml"
+    curl -o spigot.yml https://raw.githubusercontent.com/MCTweaks/eggs/main/game_eggs/minecraft/Java/spigot/spigot.yml
+fi
