@@ -38,3 +38,22 @@ fi
 cd /mnt/server
 
 echo -e "Installation Finished"
+
+
+Configuration Files Json
+{
+    "server.properties": {
+        "parser": "properties",
+        "find": {
+            "server-ip": "0.0.0.0",
+            "server-port": "{{server.build.default.port}}",
+            "query.port": "{{server.build.default.port}}"
+        }
+    },
+    "plugins/Geyser-Spigot/config.yml": {
+        "parser": "yaml",
+        "find": {
+            "port": "{{server.build.default.port}}"
+        }
+    }
+}
