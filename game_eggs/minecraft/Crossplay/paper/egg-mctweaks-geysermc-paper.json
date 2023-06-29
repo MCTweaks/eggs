@@ -7,7 +7,7 @@
     "exported_at": "2023-06-29T07:32:56-04:00",
     "name": "mctweaks-crossplay-Paper",
     "author": "MCSTweaks@gmail.com",
-    "description": "This is not a fork of Spigot. This Egg includes preconfigured files to make it as optimized as possible..",
+    "description": "This is not a fork of paper. This Egg includes preconfigured files to make it as optimized as possible..",
     "features": [
         "eula",
         "java_version",
