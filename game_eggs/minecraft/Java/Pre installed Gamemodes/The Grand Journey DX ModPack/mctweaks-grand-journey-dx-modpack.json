@@ -66,7 +66,7 @@
             "name": "Forge Version",
             "description": "Gets an exact version.\r\n\r\nEx. 1.15.2-31.2.4\r\n\r\nOverrides MC_VERSION and BUILD_TYPE. If it fails to download the server files it will fail to install.",
             "env_variable": "FORGE_VERSION",
-            "default_value": "",
+            "default_value": "1.16.5",
             "user_viewable": true,
             "user_editable": true,
             "rules": "nullable|string|max:32",
